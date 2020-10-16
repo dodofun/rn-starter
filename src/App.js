@@ -5,8 +5,7 @@
  * @format
  * @flow strict-local
  */
-
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
@@ -14,7 +13,10 @@ import {
   View,
   Text,
   StatusBar,
-} from 'react-native';
+  Image,
+  Button,
+  Alert,
+} from 'react-native'
 
 import {
   Header,
@@ -22,7 +24,11 @@ import {
   Colors,
   DebugInstructions,
   ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+} from 'react-native/Libraries/NewAppScreen'
+
+const isHermes = () => global.HermesInternal != null
+
+console.log('isHermes', isHermes)
 
 const App: () => React$Node = () => {
   return (
@@ -33,6 +39,25 @@ const App: () => React$Node = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
+          {/* 网络图片需手动设置宽高 */}
+          <Image
+            source={{
+              uri:
+                'https://imgs.krpano.weiwuu.com/resource/1514994786014502/images/97744666685070.jpg',
+            }}
+            style={{width: 400, height: 100}}
+          />
+          <Button
+            onPress={() => {
+              Alert.alert('你点击了按钮！')
+            }}
+            title="点我！"
+          />
+
+          <Image
+            source={require('./assets/img/logo.png')}
+            style={{width: 100, height: 100}}
+          />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
@@ -43,7 +68,7 @@ const App: () => React$Node = () => {
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits....
+                screen and then come back to see your edits.
               </Text>
             </View>
             <View style={styles.sectionContainer}>
@@ -69,8 +94,8 @@ const App: () => React$Node = () => {
         </ScrollView>
       </SafeAreaView>
     </>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -109,6 +134,6 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
-});
+})
 
-export default App;
+export default App
