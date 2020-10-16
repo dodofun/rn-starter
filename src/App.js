@@ -16,7 +16,7 @@ import {
   Image,
   Button,
   Alert,
-} from 'react-native'
+} from 'react-native';
 
 import {
   Header,
