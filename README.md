@@ -66,6 +66,32 @@ git init
 关联远程仓库
 git remote add origin https://github.com/dodofun/rn-starter.git
 
-
 git push -u origin master
+````
+
+## 代码规范
+
+### Commitlint
+https://segmentfault.com/a/1190000017790694
+
+````
+定制提交规范
+提交格式（注意冒号后面有空格）
+<type>: <subject>
+常用的type类别
+upd：更新某功能（不是 feat, 不是 fix）
+feat：新功能（feature）
+fix：修补bug
+docs：文档（documentation）
+style： 格式（不影响代码运行的变动）
+refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+test：增加测试
+chore：构建过程或辅助工具的变动
+例子：
+
+git commit -m 'feat: 增加 xxx 功能'
+git commit -m 'bug: 修复 xxx 功能'
+subject
+subject是 commit 目的的简短描述，可以做一些配置，如最大长度限制。
+
 ````
