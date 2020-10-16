@@ -14,7 +14,7 @@
     "upgrade": "npx react-native upgrade"
   },
   "lint-staged": {
-    "*": [
+    "*.{js,jsx}": [
       "npm run lint:fix",
       "git add"
     ]
@@ -22,7 +22,12 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": {
+        "*.{js,jsx}": [
+          "npm run lint:fix",
+          "git add"
+        ]
+      }
     }
   },
   "dependencies": {
