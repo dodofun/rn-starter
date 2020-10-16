@@ -9,21 +9,37 @@
     "ios": "npx react-native run-ios",
     "start": "npx react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "upgrade": "npx react-native upgrade"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-native": "0.63.3"
+    "react": "^16.14.0",
+    "react-native": "0.63.3",
+    "react-native-webview": "^10.9.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
+    "@babel/core": "^7.12.1",
     "@babel/runtime": "^7.12.0",
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.5.2",
     "eslint": "^7.11.0",
     "jest": "^26.5.3",
     "metro-react-native-babel-preset": "^0.63.0",
-    "react-test-renderer": "16.13.1"
+    "react-test-renderer": "^16.14.0",
+    "lint-staged": "^10.2.11"
   },
   "jest": {
     "preset": "react-native"

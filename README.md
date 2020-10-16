@@ -24,6 +24,9 @@ https://github.com/Nozbe/WatermelonDB
 rxdb
 https://github.com/pubkey/rxdb
 
+react-native-webview
+https://github.com/react-native-webview/react-native-webview
+
 react-native-swiper
 https://github.com/leecade/react-native-swiper
 
@@ -32,6 +35,9 @@ https://github.com/oblador/react-native-vector-icons
 
 react-native-gifted-chat
 https://github.com/FaridSafi/react-native-gifted-chat
+
+appcenter
+https://appcenter.ms/
 
 react-native-code-push
 https://github.com/Microsoft/react-native-code-push
@@ -48,7 +54,8 @@ https://github.com/oblador/react-native-animatable
 react-native-web
 https://github.com/necolas/react-native-web
 
-
+expo
+https://docs.expo.io/
 ````
 
 ## Git相关
