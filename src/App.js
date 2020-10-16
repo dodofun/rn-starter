@@ -52,7 +52,7 @@ const App: () => React$Node = () => {
             onPress={() => {
               Alert.alert('你点击了按钮！')
             }}
-            title="点我！"
+            title="点我a ！"
           />
 
           <Image
