@@ -10,7 +10,7 @@
     "start": "npx react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint:fix": "eslint ./ --fix",
     "upgrade": "npx react-native upgrade"
   },
   "lint-staged": {
