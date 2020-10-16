@@ -5,7 +5,7 @@
  * @format
  * @flow strict-local
  */
-import React from 'react';
+import React from 'react'
 import {
   SafeAreaView,
   StyleSheet,
@@ -16,7 +16,7 @@ import {
   Image,
   Button,
   Alert,
-} from 'react-native';
+} from 'react-native'
 
 import {
   Header,
