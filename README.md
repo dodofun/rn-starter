@@ -95,3 +95,6 @@ subject
 subject是 commit 目的的简短描述，可以做一些配置，如最大长度限制。
 
 ````
+
+
+# eslint + prettier + commitlint
