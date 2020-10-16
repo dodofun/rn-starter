@@ -27,10 +27,6 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
 
-const isHermes = () => global.HermesInternal != null
-
-console.log('isHermes', isHermes)
-
 const App: () => React$Node = () => {
   return (
     <>
